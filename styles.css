@@ -54,3 +54,38 @@
   .social-links a{text-align:center}
   footer{flex-direction:column;padding:24px 6vw 30px}
 }
+
+
+/* FINAL MOBILE OVERRIDES — single-column cards for phone */
+@media (max-width: 900px){
+  .card-grid,
+  .projects,
+  .timeline{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+  }
+
+  .card,
+  .project,
+  .timeline-item{
+    width:100% !important;
+    min-width:0 !important;
+  }
+
+  .card p,
+  .project p,
+  .timeline-item p{
+    max-width:none !important;
+  }
+}
+
+/* Extra safety for Android browsers with atypical CSS viewport scaling */
+@media (orientation: portrait) and (max-device-width: 900px){
+  .card-grid,
+  .projects,
+  .timeline{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+  }
+}
