@@ -1,1 +1,16 @@
-const btn=document.querySelector('.menu-btn');const nav=document.querySelector('.nav');if(btn&&nav){btn.addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));}
+const menuBtn = document.querySelector('.menu-btn');
+const nav = document.querySelector('.nav');
+
+if (menuBtn && nav) {
+  menuBtn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
