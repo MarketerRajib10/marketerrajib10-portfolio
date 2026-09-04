@@ -1,1 +1,16 @@
-const menuBtn=document.querySelector('.menu-btn');const nav=document.querySelector('.nav');if(menuBtn&&nav){menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open?'true':'false')});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}))}const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target)}})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const menuBtn=document.querySelector('.menu-btn');
+const nav=document.querySelector('.nav');
+
+if(menuBtn&&nav){
+  menuBtn.addEventListener('click',()=>{
+    const open=nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',open?'true':'false');
+  });
+
+  nav.querySelectorAll('a').forEach(link=>{
+    link.addEventListener('click',()=>{
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+    });
+  });
+}
