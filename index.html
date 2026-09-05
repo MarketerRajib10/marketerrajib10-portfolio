@@ -2,190 +2,350 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>MARKETER RAJIB10 — Graphic Designer & Digital Marketer</title>
-  <meta name="description" content="Portfolio of MARKETER RAJIB10 — Graphic Designer & Digital Marketer." />
-  <meta property="og:title" content="MARKETER RAJIB10 — Portfolio" />
-  <meta property="og:description" content="Creative Ideas That Drive Growth." />
-  <meta property="og:image" content="logo.png" />
-  <link rel="icon" href="logo.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marketer Rajib 10 — Graphic Designer & Digital Marketer portfolio." />
+  <title>Marketer Rajib 10 | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#07111f;
+      --bg2:#0b1728;
+      --card:rgba(255,255,255,.055);
+      --line:rgba(255,255,255,.09);
+      --text:#f4f7fb;
+      --muted:#9fb0c8;
+      --brand:#3b82f6;
+      --brand2:#60a5fa;
+      --accent:#22d3ee;
+      --shadow:0 20px 60px rgba(0,0,0,.28);
+      --radius:24px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(59,130,246,.18), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(34,211,238,.12), transparent 26%),
+        linear-gradient(180deg,var(--bg),#081321 55%,#07101c);
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max),calc(100% - 36px));margin:auto}
+    .section{padding:100px 0;position:relative}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+      color:#a9d2ff;background:rgba(59,130,246,.11);border:1px solid rgba(96,165,250,.22);
+      padding:8px 12px;border-radius:999px
+    }
+    .section-title{font:800 clamp(2rem,5vw,3.5rem)/1.05 Manrope,Inter,sans-serif;margin:16px 0 14px}
+    .section-copy{color:var(--muted);max-width:700px;line-height:1.8}
+    .glass{background:var(--card);border:1px solid var(--line);backdrop-filter:blur(16px);box-shadow:var(--shadow)}
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:100;
+      background:rgba(6,14,25,.68);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800}
+    .brand-mark{
+      width:42px;height:42px;border-radius:14px;display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow:0 10px 30px rgba(59,130,246,.35);
+      font-weight:900
+    }
+    .brand small{display:block;color:var(--muted);font-weight:500;font-size:.72rem;margin-top:2px}
+    .links{display:flex;gap:26px;align-items:center;color:#c9d5e7;font-size:.94rem}
+    .links a{transition:.25s}.links a:hover{color:white}
+    .nav-cta,.btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      padding:13px 18px;border-radius:14px;font-weight:800;border:1px solid transparent;transition:.25s
+    }
+    .nav-cta,.btn.primary{background:linear-gradient(135deg,var(--brand),#2563eb);box-shadow:0 14px 28px rgba(37,99,235,.28)}
+    .btn.secondary{border-color:var(--line);background:rgba(255,255,255,.04);color:#dce7f7}
+    .btn:hover{transform:translateY(-2px)}
+    .menu{display:none;background:none;border:0;color:white;font-size:1.4rem}
+    .hero{min-height:100vh;display:flex;align-items:center;padding-top:100px}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}
+    .hero h1{font:800 clamp(3.2rem,8vw,6.8rem)/.92 Manrope,Inter,sans-serif;letter-spacing:-.055em;margin:20px 0}
+    .hero h1 span{background:linear-gradient(90deg,#fff 0%,#9cc7ff 45%,#57d4ff 100%);-webkit-background-clip:text;color:transparent}
+    .hero p{font-size:1.1rem;line-height:1.85;color:var(--muted);max-width:720px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .hero-mini{display:flex;gap:28px;flex-wrap:wrap;margin-top:36px;color:#b7c6d9}
+    .hero-mini b{display:block;color:white;font-size:1.25rem}
+    .portrait-wrap{position:relative;min-height:500px;display:grid;place-items:center}
+    .orb{
+      width:380px;height:380px;border-radius:50%;
+      background:radial-gradient(circle at 35% 30%,#5ba4ff, #173b73 45%, #081423 73%);
+      box-shadow:0 0 100px rgba(59,130,246,.25)
+    }
+    .profile-card{
+      position:absolute;width:min(360px,88%);padding:26px;border-radius:30px;
+      background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.035));
+      border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(18px);box-shadow:var(--shadow)
+    }
+    .avatar{
+      height:285px;border-radius:22px;display:grid;place-items:center;overflow:hidden;
+      background:linear-gradient(145deg,#17304e,#0c192b)
+    }
+    .avatar svg{width:70%;opacity:.9}
+    .profile-card h3{margin:20px 0 5px;font-size:1.35rem}
+    .profile-card p{margin:0;font-size:.92rem}
+    .status{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:#bfe8d2;font-size:.85rem}
+    .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 18px #22c55e}
+    .ticker{border-block:1px solid var(--line);overflow:hidden;background:rgba(255,255,255,.025)}
+    .track{display:flex;gap:52px;width:max-content;padding:18px 0;animation:marquee 22s linear infinite;color:#b4c6db;font-weight:700}
+    @keyframes marquee{to{transform:translateX(-50%)}}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+    .card{padding:26px;border-radius:var(--radius);position:relative;overflow:hidden}
+    .card:before{content:"";position:absolute;inset:auto -40px -70px auto;width:150px;height:150px;border-radius:50%;background:rgba(59,130,246,.12);filter:blur(2px)}
+    .icon{
+      width:50px;height:50px;border-radius:16px;display:grid;place-items:center;font-size:1.25rem;
+      background:linear-gradient(145deg,rgba(59,130,246,.22),rgba(34,211,238,.1));border:1px solid rgba(96,165,250,.2)
+    }
+    .card h3{margin:22px 0 10px;font-size:1.15rem}
+    .card p{color:var(--muted);line-height:1.7;font-size:.95rem}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+    .stat{padding:26px;border-radius:20px;text-align:center}
+    .stat b{font-size:2.1rem;display:block}.stat span{color:var(--muted);font-size:.9rem}
+    .timeline{margin-top:40px;display:grid;gap:16px}
+    .job{padding:24px 26px;border-radius:20px;display:grid;grid-template-columns:180px 1fr;gap:25px;align-items:start}
+    .job .meta{color:#8ebdff;font-weight:800;font-size:.86rem}
+    .job h3{margin:0 0 8px}.job p{margin:0;color:var(--muted);line-height:1.7}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:40px}
+    .project{border-radius:26px;overflow:hidden;position:relative}
+    .project-cover{
+      aspect-ratio:16/9;display:flex;align-items:end;padding:28px;
+      background:
+        linear-gradient(180deg,transparent,rgba(0,0,0,.66)),
+        radial-gradient(circle at 70% 30%,rgba(96,165,250,.35),transparent 25%),
+        linear-gradient(135deg,#163963,#0d1726 65%);
+    }
+    .project:nth-child(2) .project-cover{background:linear-gradient(180deg,transparent,rgba(0,0,0,.66)),radial-gradient(circle at 70% 30%,rgba(16,185,129,.35),transparent 25%),linear-gradient(135deg,#163c31,#0d1726 65%)}
+    .project:nth-child(3) .project-cover{background:linear-gradient(180deg,transparent,rgba(0,0,0,.66)),radial-gradient(circle at 70% 30%,rgba(245,158,11,.35),transparent 25%),linear-gradient(135deg,#4d3218,#0d1726 65%)}
+    .project:nth-child(4) .project-cover{background:linear-gradient(180deg,transparent,rgba(0,0,0,.66)),radial-gradient(circle at 70% 30%,rgba(239,68,68,.35),transparent 25%),linear-gradient(135deg,#4b1f2a,#0d1726 65%)}
+    .project-title small{color:#c2d2e6}.project-title h3{margin:7px 0 0;font-size:1.55rem}
+    .project-info{padding:20px 24px;display:flex;justify-content:space-between;gap:15px;align-items:center}
+    .project-info p{margin:0;color:var(--muted);font-size:.9rem}
+    .tag{font-size:.78rem;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.055);border:1px solid var(--line)}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+    .skill{padding:11px 14px;border-radius:12px;background:rgba(255,255,255,.045);border:1px solid var(--line);color:#c9d8ea}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+    .price{padding:30px;border-radius:25px}
+    .price.featured{outline:1px solid rgba(96,165,250,.55);transform:translateY(-8px);background:linear-gradient(180deg,rgba(59,130,246,.14),rgba(255,255,255,.05))}
+    .price h3{font-size:1.2rem}.price .amount{font-size:2.2rem;font-weight:800;margin:16px 0}
+    .price ul{padding:0;list-style:none;display:grid;gap:11px;color:var(--muted);line-height:1.5}
+    .price li:before{content:"✓";color:#60a5fa;margin-right:10px;font-weight:900}
+    .contact{padding:42px;border-radius:30px;display:grid;grid-template-columns:1fr .9fr;gap:40px;align-items:center}
+    .contact-links{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .contact-link{padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:#d4e0ef;font-size:.9rem;word-break:break-word}
+    footer{padding:28px 0 40px;border-top:1px solid var(--line);color:#91a4bb;font-size:.88rem}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.show{opacity:1;transform:none}
+    .glow{position:absolute;width:280px;height:280px;border-radius:50%;filter:blur(100px);background:rgba(59,130,246,.12);pointer-events:none}
+    @media(max-width:900px){
+      .links{position:fixed;top:72px;left:18px;right:18px;display:none;flex-direction:column;align-items:flex-start;padding:20px;border:1px solid var(--line);border-radius:18px;background:#0b1728}
+      .links.open{display:flex}.menu{display:block}.nav-cta{display:none}
+      .hero-grid,.contact{grid-template-columns:1fr}.portrait-wrap{min-height:430px}
+      .grid-3,.pricing{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}
+      .project-grid{grid-template-columns:1fr}.job{grid-template-columns:1fr;gap:10px}
+    }
+    @media(max-width:600px){
+      .section{padding:78px 0}.container{width:min(var(--max),calc(100% - 24px))}
+      .hero{padding-top:96px}.hero-grid{gap:22px}.hero h1{font-size:3.2rem}
+      .portrait-wrap{min-height:380px}.orb{width:280px;height:280px}.avatar{height:220px}
+      .grid-3,.pricing{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}
+      .contact{padding:24px}.contact-links{grid-template-columns:1fr}
+      .project-cover{padding:20px}.project-title h3{font-size:1.3rem}
+      .price.featured{transform:none}
+    }
+  </style>
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#home">
-      <img src="logo.png" alt="MARKETER RAJIB10 logo">
-      <span>RAJIB10</span>
-    </a>
-    <button class="menu-btn" aria-label="Open navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">
+        <div class="brand-mark">R10</div>
+        <div>MARKETER RAJIB 10<small>Creative Ideas That Drive Growth</small></div>
+      </a>
+      <div class="links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="#contact">Hire Me ↗</a>
+      <button class="menu" id="menuBtn" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Graphic Designer · Digital Marketer</span>
+        <h1>I turn <span>ideas into impact.</span></h1>
+        <p>I’m Rajib Hossain, founder of Marketer Rajib 10. I create modern brand identities, social media creatives, thumbnails, and digital marketing visuals designed to help businesses look professional and grow faster.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">View My Work ↗</a>
+          <a class="btn secondary" href="#contact">Let’s Work Together</a>
+        </div>
+        <div class="hero-mini">
+          <div><b>6+ Years</b>Creative Experience</div>
+          <div><b>1000+</b>Works Completed</div>
+          <div><b>4</b>Institutions</div>
+        </div>
+      </div>
+      <div class="portrait-wrap">
+        <div class="orb"></div>
+        <div class="profile-card">
+          <div class="avatar" aria-label="Profile photo placeholder">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="72" r="38" fill="#6FA8E8"/>
+              <path d="M35 175C42 130 65 110 100 110C135 110 158 130 165 175H35Z" fill="#6FA8E8"/>
+            </svg>
+          </div>
+          <h3>Rajib Hossain</h3>
+          <p>Graphic Designer & Digital Marketer</p>
+          <div class="status"><span class="dot"></span> Available for selected projects</div>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section class="hero section" id="home">
-      <div class="hero-copy">
-        <p class="eyebrow">GRAPHIC DESIGNER • DIGITAL MARKETER</p>
-        <h1>Creative ideas<br><span>that drive growth.</span></h1>
-        <p class="hero-text">I build visual identities, high-impact social creatives and digital marketing assets for brands that want to stand out.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#projects">View My Work</a>
-          <a class="btn ghost" href="#contact">Contact Me</a>
-        </div>
-        <div class="stats">
-          <div><strong>1000+</strong><span>Creative Works</span></div>
-          <div><strong>2018</strong><span>Journey Started</span></div>
-          <div><strong>4</strong><span>IT Institutes</span></div>
-        </div>
-      </div>
+  <div class="ticker">
+    <div class="track">
+      <span>BRAND IDENTITY</span><span>•</span><span>SOCIAL MEDIA DESIGN</span><span>•</span><span>THUMBNAIL DESIGN</span><span>•</span><span>DIGITAL MARKETING</span><span>•</span><span>GRAPHIC DESIGN</span><span>•</span>
+      <span>BRAND IDENTITY</span><span>•</span><span>SOCIAL MEDIA DESIGN</span><span>•</span><span>THUMBNAIL DESIGN</span><span>•</span><span>DIGITAL MARKETING</span><span>•</span><span>GRAPHIC DESIGN</span><span>•</span>
+    </div>
+  </div>
 
-      <div class="hero-visual">
-        <div class="glow"></div>
-        <div class="logo-stage">
-          <span class="tag tag-a">BRAND IDENTITY</span>
-          <img src="logo.png" alt="MARKETER RAJIB10 brand mark">
-          <span class="tag tag-b">DIGITAL GROWTH</span>
-        </div>
+  <section class="section" id="about">
+    <div class="glow" style="left:-100px;top:80px"></div>
+    <div class="container reveal">
+      <span class="eyebrow">About Me</span>
+      <h2 class="section-title">Design, strategy & growth — in one place.</h2>
+      <p class="section-copy">My journey started with online learning and short courses, then grew through professional work, teaching, freelancing, and brand projects. I focus on clean visual communication that feels premium, clear, and useful — not just decorative.</p>
+      <div class="stats">
+        <div class="stat glass"><b>6+</b><span>Years Experience</span></div>
+        <div class="stat glass"><b>1000+</b><span>Creative Works</span></div>
+        <div class="stat glass"><b>4</b><span>Teaching Institutions</span></div>
+        <div class="stat glass"><b>∞</b><span>Ideas to Explore</span></div>
       </div>
-    </section>
-
-    <section class="section about" id="about">
-      <div class="section-head">
-        <p class="eyebrow">ABOUT</p>
-        <h2>Design, strategy and growth in one creative workflow.</h2>
+      <div class="skills">
+        <span class="skill">Adobe Photoshop</span><span class="skill">Canva</span><span class="skill">PixelLab</span><span class="skill">CapCut</span><span class="skill">Branding</span><span class="skill">Social Media</span><span class="skill">SEO</span><span class="skill">Digital Marketing</span>
       </div>
-      <div class="about-card glass">
-        <p>I'm Md Rajib Hossain, founder of MARKETER RAJIB10. My work combines graphic design and digital marketing to create brand visuals that are clean, memorable and built for growth.</p>
-        <p>I started learning in 2018 through online resources and short courses, later building hands-on experience in teaching, design and client-focused creative work.</p>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container reveal">
+      <span class="eyebrow">Services</span>
+      <h2 class="section-title">What I can do for your brand.</h2>
+      <p class="section-copy">From the first idea to final promotional creatives, these are the core services I provide.</p>
+      <div class="grid-3">
+        <article class="card glass"><div class="icon">✦</div><h3>Logo & Brand Identity</h3><p>Modern logo systems, visual direction, color strategy, brand presentation, and identity applications.</p></article>
+        <article class="card glass"><div class="icon">▦</div><h3>Social Media Design</h3><p>Professional Facebook, Instagram, LinkedIn, campaign banners, ads, and promotional post designs.</p></article>
+        <article class="card glass"><div class="icon">▶</div><h3>Thumbnail Design</h3><p>High-impact YouTube thumbnails with strong hierarchy, contrast, storytelling, and click-focused composition.</p></article>
+        <article class="card glass"><div class="icon">↗</div><h3>Digital Marketing Creatives</h3><p>Campaign visuals, ad graphics, conversion-focused design, content direction, and growth-oriented creatives.</p></article>
+        <article class="card glass"><div class="icon">◇</div><h3>Professional Graphic Design</h3><p>Posters, banners, presentation visuals, mockups, print-ready designs, and custom creative solutions.</p></article>
+        <article class="card glass"><div class="icon">◎</div><h3>Creative Direction</h3><p>Helping businesses choose the right visual style, layout, messaging, and brand consistency across platforms.</p></article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="services">
-      <div class="section-head">
-        <p class="eyebrow">SERVICES</p>
-        <h2>Creative support from identity to campaign.</h2>
-      </div>
-      <div class="card-grid">
-        <article class="glass card"><span>01</span><h3>Logo & Brand Identity</h3><p>Distinct visual systems, logo concepts and brand presentation.</p></article>
-        <article class="glass card"><span>02</span><h3>Graphic Design</h3><p>Professional marketing graphics, layouts and visual communication.</p></article>
-        <article class="glass card"><span>03</span><h3>Social Media Design</h3><p>Scroll-stopping posts, banners and campaign creatives.</p></article>
-        <article class="glass card"><span>04</span><h3>Thumbnail Design</h3><p>High-contrast thumbnails built for clarity and clicks.</p></article>
-        <article class="glass card"><span>05</span><h3>Digital Marketing Creatives</h3><p>Campaign assets designed around audience and conversion goals.</p></article>
-        <article class="glass card"><span>06</span><h3>SEO & Social Media Marketing</h3><p>Creative and strategic support for stronger digital visibility.</p></article>
-      </div>
-    </section>
-
-    <section class="section" id="projects">
-      <div class="section-head">
-        <p class="eyebrow">SELECTED PROJECTS</p>
-        <h2>Brand stories and visual systems.</h2>
-      </div>
-
-      <div class="projects">
-        <article class="project glass">
-          <img src="zelvynq.png" alt="ZELVYNQ brand identity project">
-          <div class="project-copy">
-            <span class="project-type">Brand Identity</span>
-            <h3>ZELVYNQ</h3>
-            <p>A complete visual identity presentation focused on a premium, modern brand feel.</p>
-          </div>
-        </article>
-
-        <article class="project glass">
-          <img src="btv.png" alt="Bangladesh Television concept logo project">
-          <div class="project-copy">
-            <span class="project-type">Concept Work</span>
-            <h3>Bangladesh Television</h3>
-            <p>Logo and visual identity concept created as an independent design exploration.</p>
-          </div>
-        </article>
-
-        <article class="project glass">
-          <img src="redbull.png" alt="Red Bull advertising concept">
-          <div class="project-copy">
-            <span class="project-type">Advertising Concept</span>
-            <h3>Red Bull</h3>
-            <p>An unofficial campaign concept exploring energetic visual hierarchy and product focus.</p>
-          </div>
-        </article>
-
-        <article class="project glass">
-          <img src="recent-designs.png" alt="Recent social media design collection">
-          <div class="project-copy">
-            <span class="project-type">Social Media</span>
-            <h3>Recent Designs</h3>
-            <p>A curated collection of recent graphic design and social media creative work.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="skills">
-      <div class="section-head">
-        <p class="eyebrow">SKILLS & TOOLS</p>
-        <h2>My everyday creative stack.</h2>
-      </div>
-      <div class="tools">
-        <span>Adobe Photoshop</span>
-        <span>Canva</span>
-        <span>CapCut</span>
-        <span>PixelLab</span>
-        <span>ChatGPT</span>
-        <span>AI-Assisted Workflow</span>
-      </div>
-    </section>
-
-    <section class="section" id="experience">
-      <div class="section-head">
-        <p class="eyebrow">EXPERIENCE</p>
-        <h2>A journey built through learning, teaching and creating.</h2>
-      </div>
-
+  <section class="section" id="experience">
+    <div class="container reveal">
+      <span class="eyebrow">Experience</span>
+      <h2 class="section-title">Where I’ve worked & taught.</h2>
       <div class="timeline">
-        <div class="timeline-item glass"><strong>2018</strong><h3>Started Learning Graphic Design</h3><p>Built fundamentals through online videos and short-form learning.</p></div>
-        <div class="timeline-item glass"><strong>2018–2024</strong><h3>Learning + Practical Work</h3><p>Developed practical design skills while working on real creative projects.</p></div>
-        <div class="timeline-item glass"><strong>4 Institutes</strong><h3>Graphic Design Teacher / Instructor</h3><p>ABCL IT, Future IT Institute, Mentors IT and Next Gen IT.</p></div>
-        <div class="timeline-item glass"><strong>1 Year 2 Months</strong><h3>Freelance Marketplace Experience</h3><p>Worked across design-focused freelance assignments and client requests.</p></div>
-        <div class="timeline-item glass"><strong>1 Year</strong><h3>Assistant Sales Manager</h3><p>Built client communication, sales and business-facing experience.</p></div>
-        <div class="timeline-item glass"><strong>2025–2026</strong><h3>MARKETER RAJIB10</h3><p>Focused on creative services, personal brand development and digital growth.</p></div>
+        <div class="job glass"><div class="meta">GRAPHIC DESIGN TEACHER</div><div><h3>ABCL IT</h3><p>Teaching design fundamentals, practical creative work, and professional visual communication.</p></div></div>
+        <div class="job glass"><div class="meta">GRAPHIC DESIGN TEACHER</div><div><h3>Future IT Institute</h3><p>Worked with learners on design skills, digital tools, and practical project development.</p></div></div>
+        <div class="job glass"><div class="meta">SEO & SOCIAL MEDIA</div><div><h3>Mentors IT Academy</h3><p>Training and guidance in SEO, social media, and digital marketing-focused creative practices.</p></div></div>
+        <div class="job glass"><div class="meta">GRAPHIC DESIGN TEACHER</div><div><h3>Next Gen IT</h3><p>Helping students build creative confidence, portfolios, and real-world design workflows.</p></div></div>
+        <div class="job glass"><div class="meta">1 YEAR</div><div><h3>Assistant Sales Manager</h3><p>Professional sales experience with customer communication, team coordination, and business support.</p></div></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section contact" id="contact">
-      <div class="contact-panel glass">
-        <p class="eyebrow">CONTACT</p>
-        <h2>Have a project in mind?</h2>
-        <p>Let's create something clear, memorable and built to perform.</p>
+  <section class="section" id="projects">
+    <div class="container reveal">
+      <span class="eyebrow">Selected Projects</span>
+      <h2 class="section-title">Branding & visual work.</h2>
+      <p class="section-copy">Replace these preview blocks with your real project images later. The layout is already ready for Behance-style case studies.</p>
+      <div class="project-grid">
+        <article class="project glass"><div class="project-cover"><div class="project-title"><small>Real Estate Branding</small><h3>ASSETO</h3></div></div><div class="project-info"><p>Premium property identity concept.</p><span class="tag">Branding</span></div></article>
+        <article class="project glass"><div class="project-cover"><div class="project-title"><small>Traditional Food Brand</small><h3>SHADOMUL</h3></div></div><div class="project-info"><p>Rooted local-food brand identity.</p><span class="tag">Identity</span></div></article>
+        <article class="project glass"><div class="project-cover"><div class="project-title"><small>Broadcast Identity Concept</small><h3>BTV Logo Project</h3></div></div><div class="project-info"><p>Modern visual identity submission concept.</p><span class="tag">Logo</span></div></article>
+        <article class="project glass"><div class="project-cover"><div class="project-title"><small>Fashion Brand Exploration</small><h3>NOKKHOTRO</h3></div></div><div class="project-info"><p>Minimal fashion symbol exploration.</p><span class="tag">Fashion</span></div></article>
+      </div>
+    </div>
+  </section>
 
-        <div class="contact-actions">
-          <a class="btn primary" href="mailto:marketerrajib10@gmail.com">Email Me</a>
-          <a class="btn ghost" href="tel:+966572405216">Saudi Contact</a>
-          <a class="btn ghost" href="tel:+8801329548497">Bangladesh Contact</a>
+  <section class="section" id="pricing">
+    <div class="container reveal">
+      <span class="eyebrow">Packages</span>
+      <h2 class="section-title">Simple starting packages.</h2>
+      <p class="section-copy">You can change the prices anytime. These are placeholders so the website looks complete.</p>
+      <div class="pricing">
+        <div class="price glass"><h3>Starter</h3><div class="amount">৳ —</div><ul><li>1 design direction</li><li>2 revisions</li><li>High-resolution export</li><li>Basic support</li></ul><a class="btn secondary" href="#contact">Choose Starter</a></div>
+        <div class="price glass featured"><h3>Professional</h3><div class="amount">৳ —</div><ul><li>Multiple design concepts</li><li>Priority revisions</li><li>Social-ready files</li><li>Mockup presentation</li></ul><a class="btn primary" href="#contact">Most Popular</a></div>
+        <div class="price glass"><h3>Brand Package</h3><div class="amount">Custom</div><ul><li>Full brand direction</li><li>Identity system</li><li>Social media kit</li><li>Brand presentation</li></ul><a class="btn secondary" href="#contact">Request Quote</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact glass reveal">
+        <div>
+          <span class="eyebrow">Contact</span>
+          <h2 class="section-title">Have a project in mind?</h2>
+          <p class="section-copy">Let’s create something professional, memorable, and useful for your business. Reach me through any of the channels here.</p>
+          <div class="hero-actions"><a class="btn primary" href="mailto:marketerrajib10@gmail.com">Email Me ↗</a></div>
         </div>
-
-        <div class="social-links">
-          <a href="https://www.facebook.com/marketerrajib10" target="_blank" rel="noopener">Facebook</a>
-          <a href="https://www.instagram.com/marketerrajib10" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.linkedin.com/in/rajibhossain156" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.behance.net/MARKETERRAJIB10" target="_blank" rel="noopener">Behance</a>
-          <a href="https://github.com/MarketerRajib10" target="_blank" rel="noopener">GitHub</a>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:marketerrajib10@gmail.com">✉ marketerrajib10@gmail.com</a>
+          <a class="contact-link" href="tel:+8801329548497">☎ +880 1329-548497</a>
+          <a class="contact-link" target="_blank" href="https://www.facebook.com/marketerrajib10">Facebook ↗</a>
+          <a class="contact-link" target="_blank" href="https://www.instagram.com/marketerrajib10">Instagram ↗</a>
+          <a class="contact-link" target="_blank" href="https://www.linkedin.com/in/rajibhossain156">LinkedIn ↗</a>
+          <a class="contact-link" target="_blank" href="https://www.behance.net/MARKETERRAJIB10">Behance ↗</a>
+          <a class="contact-link" target="_blank" href="https://github.com/MarketerRajib10">GitHub ↗</a>
+          <a class="contact-link" href="#home">Back to Top ↑</a>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer>
-    <span>© 2026 MARKETER RAJIB10</span>
-    <a href="#home">Back to top ↑</a>
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Marketer Rajib 10. All rights reserved.</span>
+      <span>Creative Ideas That Drive Growth.</span>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const menuBtn=document.getElementById('menuBtn');
+    const navLinks=document.getElementById('navLinks');
+    menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){entry.target.classList.add('show')}
+      })
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
 </body>
 </html>
