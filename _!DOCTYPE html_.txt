@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MARKETER RAJIB10 — Creative Ideas That Drive Growth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1e3aed;
+    --blue-deep:#111b6e;
+    --ink:#0c1230;
+    --paper:#ffffff;
+    --mist:#f3f5ff;
+    --line:rgba(17,27,110,0.12);
+    --gold:#ffb020;
+    --muted:#5b6180;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+  }
+  h1,h2,h3,.disp{
+    font-family:'Space Grotesk', sans-serif;
+    margin:0;
+    color:var(--blue-deep);
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 24px;}
+  section{padding:84px 0;}
+  .label{
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    color:var(--blue);
+    margin-bottom:10px;
+    display:block;
+  }
+  .section-head{max-width:560px; margin-bottom:44px;}
+  .section-head h2{font-size:clamp(24px,3.4vw,32px); line-height:1.3;}
+
+  .nav{
+    position:sticky; top:0; z-index:80;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1100px; margin:0 auto; padding:14px 24px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand span{font-family:'Space Grotesk'; font-weight:700; font-size:17px; color:var(--blue-deep);}
+  .nav-links{display:flex; gap:26px; font-size:14.5px; font-weight:600; color:var(--ink);}
+  .nav-links a:hover{color:var(--blue);}
+  .nav-cta{
+    background:var(--blue); color:#fff; padding:9px 18px;
+    border-radius:8px; font-weight:700; font-size:14px;
+  }
+
+  .hero{
+    background:
+      radial-gradient(700px 400px at 85% -10%, rgba(30,58,237,0.10), transparent 60%),
+      var(--mist);
+    padding:80px 0 60px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{display:grid; grid-template-columns:1.15fr 0.85fr; gap:50px; align-items:center;}
+  .kicker{
+    display:inline-block;
+    font-size:13px; font-weight:700; letter-spacing:0.06em;
+    color:var(--blue); background:rgba(30,58,237,0.08);
+    padding:6px 14px; border-radius:20px; margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(32px,5vw,50px);
+    line-height:1.15;
+    font-weight:700;
+  }
+  .hero p.sub{
+    margin-top:18px; font-size:17px; color:var(--muted); max-width:48ch;
+  }
+  .hero-ctas{display:flex; gap:14px; margin-top:30px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:13px 24px; border-radius:9px;
+    font-weight:700; font-size:15px; border:none; cursor:pointer;
+  }
+  .btn-primary{background:var(--blue); color:#fff;}
+  .btn-outline{background:transparent; border:1.5px solid var(--blue); color:var(--blue);}
+  .btn:active{transform:scale(.97);}
+  .stat-row{display:flex; gap:36px; margin-top:44px; flex-wrap:wrap;}
+  .stat b{
+    font-family:'Space Grotesk'; font-size:26px; color:var(--blue-deep); display:block;
+  }
+  .stat span{font-size:13.5px; color:var(--muted);}
+  .hero-visual{
+    background:var(--blue-deep);
+    border-radius:20px;
+    padding:40px 26px;
+    text-align:center;
+    color:#dfe4ff;
+    box-shadow:0 24px 50px rgba(17,27,110,0.25);
+  }
+  .hero-visual .tagline{font-family:'Space Grotesk'; font-weight:600; font-size:18px; color:#fff;}
+
+  .about-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:50px; align-items:flex-start;}
+  .about-card{
+    background:var(--mist); border-radius:16px; padding:26px;
+  }
+  .about-card p{margin:0 0 8px; font-size:15px; color:var(--muted);}
+  .about-copy p{font-size:16px; color:var(--ink); margin:0 0 16px;}
+
+  .service-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;
+  }
+  .service-card{
+    background:var(--paper); border:1px solid var(--line); border-radius:14px;
+    padding:24px; cursor:pointer; transition:border-color .15s ease, transform .15s ease;
+    text-align:left;
+  }
+  .service-card:hover{border-color:var(--blue); transform:translateY(-2px);}
+  .service-num{
+    font-family:'Space Grotesk'; font-weight:700; color:var(--blue);
+    font-size:14px; margin-bottom:14px; display:block;
+  }
+  .service-card h3{font-size:17.5px; margin-bottom:8px;}
+  .service-card p{font-size:14.5px; color:var(--muted); margin:0;}
+  .service-more{font-size:13.5px; color:var(--blue); font-weight:700; margin-top:14px; display:inline-block;}
+  .service-price{
+    font-family:'Space Grotesk'; font-weight:700; font-size:19px;
+    color:var(--blue-deep); margin-top:14px;
+  }
+  .modal-price{
+    font-family:'Space Grotesk'; font-weight:700; font-size:24px;
+    color:var(--blue); margin-bottom:14px;
+  }
+
+  .project-grid{
+    display:grid; grid-template-columns:repeat(2, 1fr); gap:22px;
+  }
+  .project-card{
+    border:1px solid var(--line); border-radius:14px; overflow:hidden;
+    cursor:pointer; background:var(--paper);
+  }
+  .project-card img{width:100%; aspect-ratio:16/10; object-fit:cover; background:var(--mist);}
+  .project-body{padding:18px 20px;}
+  .project-tag{font-size:12.5px; font-weight:700; color:var(--blue); letter-spacing:.03em;}
+  .project-body h3{font-size:18px; margin:6px 0 6px;}
+  .project-body p{font-size:14px; color:var(--muted); margin:0;}
+
+  .skills-row{display:flex; flex-wrap:wrap; gap:12px;}
+  .skill-chip{
+    background:var(--mist); border:1px solid var(--line); border-radius:24px;
+    padding:9px 18px; font-size:14px; font-weight:600; color:var(--blue-deep);
+  }
+
+  .timeline{border-left:2px solid var(--line); padding-left:26px; display:flex; flex-direction:column; gap:30px;}
+  .tl-item{position:relative;}
+  .tl-item::before{
+    content:""; position:absolute; left:-32px; top:4px;
+    width:12px; height:12px; border-radius:50%; background:var(--blue);
+    border:3px solid var(--mist);
+  }
+  .tl-year{font-size:13px; font-weight:700; color:var(--blue); margin-bottom:4px; display:block;}
+  .tl-item h3{font-size:17px; margin-bottom:4px;}
+  .tl-item p{margin:0; font-size:14.5px; color:var(--muted);}
+
+  .contact-section{background:var(--blue-deep); color:#dfe4ff;}
+  .contact-section .label{color:var(--gold);}
+  .contact-section h2{color:#fff;}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:flex-start;}
+  .contact-info p{color:#c3c9ee; font-size:15.5px; margin:0 0 22px; max-width:40ch;}
+  .info-line{display:flex; gap:12px; margin-bottom:14px; font-size:15px;}
+  .info-line b{color:#fff; font-weight:600;}
+  .social-row{display:flex; gap:12px; margin-top:26px; flex-wrap:wrap;}
+  .social-chip{
+    background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16);
+    padding:9px 16px; border-radius:9px; font-size:14px; font-weight:600; color:#fff;
+  }
+  .social-chip:hover{background:rgba(255,255,255,0.16);}
+  .contact-card{
+    background:#fff; border-radius:16px; padding:28px; color:var(--ink);
+  }
+  .field{margin-bottom:14px;}
+  .field label{display:block; font-size:13px; font-weight:600; margin-bottom:6px; color:var(--muted);}
+  .field input, .field textarea, .field select{
+    width:100%; padding:11px 13px; border-radius:8px; border:1px solid #d7dbf2;
+    font-family:inherit; font-size:14.5px; background:var(--mist);
+  }
+  .field input:focus, .field textarea:focus, .field select:focus{
+    outline:2px solid var(--blue); background:#fff;
+  }
+
+  footer{
+    background:#0a0f2b; color:#8891bd; text-align:center; padding:26px 0; font-size:13.5px;
+  }
+  footer a{color:#c3c9ee;}
+
+  .modal-overlay{
+    display:none; position:fixed; inset:0; background:rgba(10,15,43,0.55);
+    z-index:200; align-items:center; justify-content:center; padding:20px;
+  }
+  .modal-overlay.active{display:flex;}
+  .modal-box{
+    background:#fff; border-radius:16px; max-width:480px; width:100%;
+    padding:30px; position:relative; max-height:85vh; overflow:auto;
+  }
+  .modal-close{
+    position:absolute; top:16px; right:18px; background:none; border:none;
+    font-size:22px; cursor:pointer; color:var(--muted);
+  }
+  .modal-box .label{margin-bottom:6px;}
+  .modal-box h3{font-size:22px; margin-bottom:12px;}
+  .modal-box p{font-size:15px; color:var(--muted); margin:0 0 10px;}
+  .modal-box img{border-radius:10px; margin-bottom:16px;}
+
+  @media (max-width:860px){
+    .nav-links{display:none;}
+    .hero-grid, .about-grid, .contact-grid{grid-template-columns:1fr;}
+    .service-grid{grid-template-columns:1fr 1fr;}
+    .project-grid{grid-template-columns:1fr;}
+    .hero-visual{order:-1;}
+  }
+  @media (max-width:560px){
+    .service-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <span style="font-family:'Space Grotesk';font-weight:700;font-size:20px;background:#1e3aed;color:#fff;padding:6px 10px;border-radius:8px;">R10</span>
+      <span>RAJIB10</span>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav-cta">Contact Me</a>
+  </div>
+</div>
+
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">GRAPHIC DESIGNER • DIGITAL MARKETER</span>
+      <h1>Creative ideas that drive growth.</h1>
+      <p class="sub">I build visual identities, high-impact social creatives and digital marketing assets for brands that want to stand out.</p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><b>1000+</b><span>Creative Works</span></div>
+        <div class="stat"><b>2018</b><span>Journey Started</span></div>
+        <div class="stat"><b>4</b><span>IT Institutes</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div style="font-family:'Space Grotesk';font-weight:700;font-size:40px;background:rgba(255,255,255,0.12);color:#fff;width:90px;height:90px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">R10</div>
+      <div class="tagline">Brand Identity — Digital Growth</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <span class="label">ABOUT</span>
+      <h2>Design, strategy and growth in one creative workflow.</h2>
+    </div>
+    <div class="about-copy">
+      <p>I'm Md Rajib Hossain, founder of MARKETER RAJIB10. My work combines graphic design and digital marketing to create brand visuals that are clean, memorable and built for growth.</p>
+      <p>I started learning in 2018 through online resources and short courses, later building hands-on experience in teaching, design and client-focused creative work.</p>
+      <div class="about-card">
+        <p><b style="color:var(--blue-deep)">Tools:</b> Adobe Photoshop, Canva, CapCut, PixelLab, ChatGPT / AI-Assisted Workflow</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="background:var(--mist);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">SERVICES</span>
+      <h2>Creative support from identity to campaign.</h2>
+    </div>
+    <div class="service-grid" id="serviceGrid"></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">SELECTED PROJECTS</span>
+      <h2>Brand stories and visual systems.</h2>
+    </div>
+    <div class="project-grid" id="projectGrid"></div>
+  </div>
+</section>
+
+<section style="background:var(--mist);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">SKILLS &amp; TOOLS</span>
+      <h2>My everyday creative stack.</h2>
+    </div>
+    <div class="skills-row">
+      <span class="skill-chip">Adobe Photoshop</span>
+      <span class="skill-chip">Canva</span>
+      <span class="skill-chip">CapCut</span>
+      <span class="skill-chip">PixelLab</span>
+      <span class="skill-chip">ChatGPT</span>
+      <span class="skill-chip">AI-Assisted Workflow</span>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">EXPERIENCE</span>
+      <h2>A journey built through learning, teaching and creating.</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><span class="tl-year">2018</span><h3>Started Learning Graphic Design</h3><p>Built fundamentals through online videos and short-form learning.</p></div>
+      <div class="tl-item"><span class="tl-year">2018–2024</span><h3>Learning + Practical Work</h3><p>Developed practical design skills while working on real creative projects.</p></div>
+      <div class="tl-item"><span class="tl-year">4 Institutes</span><h3>Graphic Design Teacher / Instructor</h3><p>ABCL IT, Future IT Institute, Mentors IT and Next Gen IT.</p></div>
+      <div class="tl-item"><span class="tl-year">1 Year 2 Months</span><h3>Freelance Marketplace Experience</h3><p>Worked across design-focused freelance assignments and client requests.</p></div>
+      <div class="tl-item"><span class="tl-year">1 Year</span><h3>Assistant Sales Manager</h3><p>Built client communication, sales and business-facing experience.</p></div>
+      <div class="tl-item"><span class="tl-year">2025–2026</span><h3>MARKETER RAJIB10</h3><p>Focused on creative services, personal brand development and digital growth.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <span class="label">CONTACT</span>
+      <h2>Have a project in mind?</h2>
+      <p>Let's create something clear, memorable and built to perform.</p>
+      <div class="info-line">📧 <b>marketerrajib10@gmail.com</b></div>
+      <div class="info-line">📱 Bangladesh: <b>+880 1329 548497</b></div>
+      <div class="info-line">📱 Saudi Arabia:
